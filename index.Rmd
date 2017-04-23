@@ -1,0 +1,137 @@
+---
+title: "Veri Bilimi ve R"
+author: "Imran Kocabiyik"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+```
+
+
+İki yıldır yoğunlukla kullandığım R programlama dili ile ilgili bilgi ve deneyimlerimi paylaşmak isterim.
+Bu yazıdaki konuları üç temel başlık altında toplamak istiyorum:  
+
+* Bölüm 1: Genel giriş
+* Bölüm 2: Veri Bilimi ve R
+* Bölüm 3: Yenilikler
+
+## Genel Giriş
+
+_Bölüm 1: Bu bölümü daha önce herhangi bir programlama dilinde deneyiminiz olmadığını varsayarak yazıyorum. Dilerseniz bir sonraki bölüme geçebilirsiniz._
+
+### 1. Yüksek Düzeyli Programlama Dili (High Level Programming Language)
+
+Yüksek düzeyli programlama dili, insan diline yakın, işlemciye uzak bir yapıdadır. İngilizce bilgisi, yüksek düzeyli programlama dilini öğrenmeyi kolaylaştırır.
+R da yüksek düzeyli bir programlama dilidir: Fonksiyonlar genelde İngilizce fiillerdir: `select`, `filter`, `group_by`, `summarize`…  
+
+Yüksek düzeyli programlama dilleri için şunları söyleyebiliriz:
+
+* Öğrenmesi kolay  
+* Geliştirmesi kolay  
+* Uygulamaya hazır pek çok fonksiyon, paket, modül bolluğu  
+
+_*Örnek:* Bir histogram için yalnızca hist() gibi bir fonksiyonu çalıştırmanız yeterli olabilir._  
+
+### 2. Alana Özgün Dil (Domain Specific Language)
+
+Alana özgü dil demek, o programlama dilinin bir alanda öne çıkması, o alanda yoğunlukla kullanılması demektir.
+R programlama dili alana özgü bir dildir çünkü daha çok veri analizi için kullanılır.
+
+_*Örnek:* İstatistik ders kitaplarına girmiş ama R kütüphanelerinde bir karşılık bulamamış konu çok azdır. Çoğu istatistikçi yayınladığı makalenin yanı sıra, onu uygulamak için bir R kütüphanesi de yayınlıyor._
+
+### 3. R ve Python
+
+R, en çok Python ile karşılaştırılır. Python, genel amaçlı bir dil (GPL) olsa da, veri analizi için de oldukça yaygın olarak kullanılmaktadır.  
+Dünyada Python kullanıcı sayısı R kullanıcı sayısından daha fazladır. Fakat dünyada yazılımcı sayısının, istatistikçi ve veri analistlerine göre daha fazla olduğunu da söylemek gerek.  
+
+### 4. RStudio
+
+![](https://cdn-images-1.medium.com/max/1600/1*S-EK-5mKK8Wz3pwJhJq1Mg.png)
+
+RStudio, R programlama dili için en çok kullanılan geliştirme ortamıdır. Çalışma verimliliğini oldukça attırıyor.
+
+_Bölüm 2: Bu bölümü R, Python, SQL ya da Excel gibi programlama dili ya da araçlarla veri analizi yaptığınızı ve R programlama diline ilgi duyduğunuzu varsayarak yazıyorum._
+
+## Veri Bilimi ve R
+
+Veri Bilimi konu başlığını 5 başlık altında toplayacağım. Bu aşamaları kısaca açıklayıp o süreçte kullanılabilecek R paketlerini ve faydalı bulduğum eğitim kaynaklarını listeleyeceğim.
+
+### 1. Veri Kaynaklarına Erişme
+
+Üzerinde çalışılan soruya cevap oluşturabilecek veri kaynağına ulaşma sürecidir. Bu kaynaklar veri tabanları, metin dosyaları, API bağlantıları gibi pek çok ortamda bulunabilir.  
+
+Paketler:
+`readr`, `readxl`, `foreign`, `haven`, `DBI`,...
+
+Eğitim Kaynakları:  
+[Getting and Cleaning Data- Coursera](https://www.coursera.org/learn/data-cleaning)  
+[Importing Data Into R (Part 1) — Datacamp](https://www.datacamp.com/courses/importing-data-in-r-part-1)  
+[Importing Data Into R (Part 2) — Datacamp](https://www.datacamp.com/courses/importing-data-in-r-part-2)  
+[Cleaning Data in R — Datacamp](https://www.datacamp.com/courses/cleaning-data-in-r)  
+
+### 2. Veri İşleme & Dönüştürme
+
+Dağınık şekilde tutulan veriyi düzenli forma getirme sürecidir. Düzenli form: her gözlemin bir satır, her değişkenin bir sütun olduğu tabular veridir. Veri, düzenli formda olmadığı takdirde onu modellemek, görselleştirmek gibi süreçler karmakarışık bir hâl alır.  
+
+Paketler:
+`dplyr`, `tidyr`, `reshape2`
+
+Eğitim Kaynakları:  
+[Data Manipulation in R with dplyr — Datacamp](https://www.datacamp.com/courses/dplyr-data-manipulation-r-tutorial)  
+[Joining Data in R with dplyr — Datacamp](https://www.datacamp.com/courses/joining-data-in-r-with-dplyr)  
+[Tidy Data — Hadley Wickham](http://vita.had.co.nz/papers/tidy-data.pdf)
+
+### 3. Keşifçi Veri Analizi (Exploratory Data Analysis)
+
+Keşifçi Veri Analizi, bir modeli kurgulama öncesinde veriyi anlamak için kullanılan istatistiksel yöntemler ve veri görselleştirmeleridir. Bu çalışmaları ancak takım arkadaşlarınızla ya da çalışmanızı devam ettirebilecek başka insanlarla paylaşabilirsiniz. Çünkü bu çalışmalar son ürün değildir ve bu yöntemleri anlamak için uzmanlık gerekir.
+
+Paketler:
+`ggplot2`  
+
+Eğitim Kaynakları:  
+[Exploratory Data Analysis — Coursera](https://www.coursera.org/learn/exploratory-data-analysis)  
+[Data Visualization with ggplot2 (Part 1) — Datacamp](https://www.datacamp.com/courses/data-visualization-with-ggplot2-1)  
+[Data Visualization with ggplot2(Part 2) — Datacamp(](https://www.datacamp.com/courses/data-visualization-with-ggplot2-2))  
+[Data Visualization with ggplot2(Part 3) — Datacamp](https://www.datacamp.com/courses/data-visualization-with-ggplot2-3)  
+
+### 4. Modelleme
+
+Bir soru ya da bir olguyu açıklayan soyut bir mekanizma yaratma sürecidir. Bu süreç için matematik ve istatistiğe yakın olmak gerekir. 
+
+Paketler:
+`broom`, `purrr`, `caret`
+
+Eğitim Kaynakları:  
+[Regression Models — Coursera](https://www.coursera.org/learn/regression-models)  
+[Introduction to Machine Learning with R — Datacamp](https://www.datacamp.com/courses/introduction-to-machine-learning-with-r)  
+[Unsupervised Learning — Datacamp](https://www.datacamp.com/courses/unsupervised-learning-in-r)  
+[Practical Machine Learning — Coursera](https://www.coursera.org/learn/practical-machine-learning)  
+
+### 5. Ürünleştirme
+
+Geliştirdiğiniz modeli güçlü iletişim yöntemleriyle diğer insanlarla paylaşabilmek de önemli bir süreçtir. Çalışmalarınızın işe yarayabilmesi ve değer yaratabilmesi için bu alana da özen göstermeniz gerekiyor.
+
+Paketler:
+`shiny`, `rmarkdown`, `knitr`
+
+Eğitim Kaynakları:  
+[Shiny Tutorial — RStudio](http://shiny.rstudio.com/tutorial/)  
+[Reproduciple Research — Coursera](https://www.coursera.org/learn/reproducible-research)  
+[Reporting with R Markdown — Datacamp](https://www.datacamp.com/courses/reporting-with-r-markdown)  
+
+_Bölüm 3: Bu bölümü R programlama dilinde bir tecrübenizin olduğunu varsayarak yazıyorum._
+
+## Yenilikler
+### 1. Fonksiyonel Programlama
+
+Bu size şaşırtıcı gelebilir ama, R programlama dilinde kayda değer bir deneyim sahibi olduğunu iddia eden biri olarak for döngüsünü sadece birkaç defa kullandım. Benzer şeyi diğer kontrol yapıları için de söyleyebilirim (`if`, `while`, …). Çünkü fonksiyonel programlama ve modern paketlerler ile temel R içindeki kontrol yapılarına ve fonksiyonlara çok az ihtiyaç duyuyorum.  
+
+Şimdiye kadar pek çok programlama dili ile çalışmış ve temel mesleği yazılım geliştirmek olan kişiler bu bakış açımı eleştirebilir. Dolayısıyla programlama konusunda faydacı bir yaklaşımımın olduğunu belirtmek istiyorum.
+
+### 2. Tidyverse
+
+R programlama dili ile hızlı, keyifli ve verimli çalışmak istiyorsanız; kesinlikle tidyverse paketleri ile çalışmanızı tavsiye ederim. `tidyverse`, birbirleriyle uyum içinde ve hızlı bir şekilde çalışan, bilinen tüm veri bilimi problemleri için çözümler barındıran paketler bütünüdür: `ggplot2`, `tibble`, `tidyr`, `readr`, `purrr`, `dplyr`
+Tidyverse hakkında daha fazla bilgi için, bu paketlerin geliştiricisi Hadley Wickham’ın konferans videosunu izleyebilirsiniz.
+
+<iframe width="853" height="480" src="https://www.youtube.com/embed/rz3_FDVt9eg" frameborder="0" allowfullscreen></iframe>

@@ -1,0 +1,132 @@
+---
+title: "ggplot"
+author: "Imran Kocabiyik"
+date: "4/22/2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Grafiğin Anatomisi
+
+Veri anlatan bir grafiği analitik olarak incelemek, sizi düşünmeye zorlar ve alışılagelmişin dışındaki grafikleri kurgulayabilmenizi sağlar.  
+Ben grafik üzerine düşünmeyi ggplot2 R kütüphanesi ile çalıştığım süreçte öğrendim.
+
+## Grammar of Graphics
+
+ggplot2, Lenand Wilkinson’ın yazdığı Grammar of Graphics kitabına dayanıyor. ggplot2 ile bir grafik kurgularken veriyi ve grafiği oluşturan elementleri düşünüp anlamak gerekiyor.
+
+![](https://cdn-images-1.medium.com/max/1600/1*FS2N17XdpiQ8QFXpCxn5gg.png)
+
+Bunu örnekler ile uygulayalım:  
+
+### Örnek 1: Küçük Kareler
+
+Aşağıdaki görseli küçük kareler yöntemini anlatan bir youtube videosundan aldım. Daha önce lineer regresyon konusunu içeren bir ders almışsanız bu grafik size tanıdık gelebilir. Elle çizilmiş bu grafiğin benzerini ggplot2 ile kurgulacağım.
+
+![](https://cdn-images-1.medium.com/max/1600/1*rynZ79K13bunebsl8_RLIQ.jpeg)
+
+Bu grafiğin ögeleri şunlar:  
+
+* Kartezyen düzlem
+* Noktalar
+* Regresyon Doğrusu
+* Doğru Segmentleri
+* Başka bir doğru segmenti(ok: ↖)
+* Bir metin (“Linear Model”)
+
+![](https://cdn-images-1.medium.com/max/2000/1*snvAsRI59fHpKKKigE_InA.png)
+
+Aşağıdaki kod bloğu bu ögeleri birleştirecek:  
+
+```{r lineer-regresyon, fig.align='center'}
+library(magrittr)
+library(ggplot2)
+library(broom)
+mtcars %$%
+        lm(disp~wt) %>% 
+        augment() %>% 
+        ggplot(mapping = aes(x = wt, y = disp)) +
+        geom_point() +
+        geom_smooth(method = "lm", se = FALSE) +
+        geom_segment(aes(x = wt, xend = wt,
+                         y = disp, yend = .fitted)) +
+        geom_segment(aes(x = 5, y = 270, xend = 4.7, yend = 350),
+                     arrow = arrow(length = unit(0.5, "cm"))) +
+        annotate("text", x = 5, y = 250, label = "Linear Model")
+```
+
+### Örnek 2: Uçuş Haritası
+
+Son aylarda gittiğim şehirlerin bir uçuş haritasını çıkarmak istersem, aklıma şuna benzer bir kurgu gelir:  
+
+* Koordinatları ifade etmek için bir kartezyen düzlem (x = long, y = lat)  
+* Ülke ve sınırlarını göstermek için çokgenler  
+* Başlangıç ve bitiş noktalarını birleştiren eğriler  
+
+```{r ggplot_flight_map, fig.align='center', message=FALSE, warning=FALSE}
+# get data ----------
+library(dplyr)
+library(ggplot2)
+df <- data_frame(origin = c("Istanbul", "Berlin", "Berlin", "Berlin"),
+                 destination = c("Berlin", "Prague", "Tenerife", "Zurich"))
+
+library(ggmap)
+for (i in 1:nrow(df)) {
+        df$origin_lon[i] <- geocode(df$origin[i])[1, 1]
+        df$origin_lat[i] <- geocode(df$origin[i])[1, 2]
+}
+
+for (i in 1:nrow(df)) {
+        df$destination_lon[i] <- geocode(df$destination[i])[1, 1]
+        df$destination_lat[i] <- geocode(df$destination[i])[1, 2]
+}
+
+# visualize ----------
+world <-  map_data("world") %>% tbl_df()
+ggplot(data = df) + 
+        geom_polygon(data = world, aes(x = long, y = lat, group=group), 
+                     size = 0.2, color="white", alpha = 0.9, fill="gray") + 
+        geom_curve(aes(x = origin_lon, y = origin_lat,
+                       xend = destination_lon, yend = destination_lat),
+                   curvature = 0.2, color = "darkblue") +
+        coord_cartesian(xlim = c(-25, 60), ylim = c(20, 60))
+```
+
+
+
+### Örnek 3: Satranç
+
+Aşağıdaki örnek Joshua Kunst’un blogunda gördüğüm bir grafik. Kareler `geom_tile` ve eğriler `geom_curve` ile oluşturulmuş bir grafik. FIDE World Cup 2015' teki tüm satranç oyunlarındaki f1 karesindeki filin hareketlerini görselleştiriyor. (Merak ediyorsanız, `piece == “f1 Bishop”` filtresini değiştirerek diğer taşlar için de grafik oluşturabilirsiniz.)
+
+```{r, satranc, fig.align='center'}
+# Original work: http://jkunst.com/r/visualizing-chess-data-with-ggplot/
+
+library(readr)
+dfboard <- read_csv("https://raw.githubusercontent.com/kocabiyik/chess/master/dfboard.csv")
+dfpaths <- read_csv("https://raw.githubusercontent.com/kocabiyik/chess/master/dfpaths.csv")
+
+library(ggplot2)
+library(dplyr)
+ggplot() +
+        geom_tile(data = dfboard, aes(x, y, fill = cc)) +
+        geom_curve(data = dfpaths %>% filter(piece == "f1 Bishop", x_gt_y_equal_xy_sign),
+                   aes(x = x.from, y = y.from, xend = x.to, yend = y.to),
+                   position = position_jitter(width = 0.2, height = 0.2),
+                   curvature = 0.50, angle = -45, alpha = 0.02, color = "white", size = 1.05) +
+        geom_curve(data = dfpaths %>% filter(piece == "f1 Bishop", !x_gt_y_equal_xy_sign),
+                   aes(x = x.from, y = y.from, xend = x.to, yend = y.to),
+                   position = position_jitter(width = 0.2, height = 0.2),
+                   curvature = -0.50, angle = 45, alpha = 0.02, color = "white", size = 1.05) +
+        scale_fill_manual(values =  c("gray10", "gray20")) +
+        coord_equal()
+```
+
+
+
+## Özet
+
+Bu üç örnekte görüleceği üzere, ggplot2 size bar grafik, pasta grafik gibi alışılagelmiş grafikleri hazır sunmak yerine, kapsamlı bir ‘Grammar’ sağlıyor. Bu sebeple, ggplot2 için olabildiğince esnek ve analitik diyebiliriz.
+ggplot2'ye alışmak biraz zaman alabiliyor. Ama R kullanıyorsanız temel grafik sistemi ve lattice’i bir kenara bırakıp ggplot2 öğrenmenizi tavsiye edebilirim.
