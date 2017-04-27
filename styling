@@ -1,6 +1,4 @@
-/* Between Head tag insert  
-<link rel="stylesheet" href="styles.css"> */
-
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab|Lato|PT+Serif+Caption');
 
 body {
 	background-color: #fcfcfc;
@@ -9,12 +7,13 @@ body {
 
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: "Roboto Slab", ff-tisa-web-pro, Georgia, Arial, sans-serif;
+	font-family: "Roboto Slab", "PT Serif Caption", Georgia, Arial, sans-serif;
 	font-style: normal;
 	font-variant: normal;
 	font-weight: bold;
 	letter-spacing: normal;
 	text-decoration: none solid rgb(159, 32, 66);
+	color: rgb(159, 32, 66);
 	text-align: start;
 	text-indent: 0px;
 	text-transform: none;
@@ -106,8 +105,6 @@ code {
 	/* Effects */
 	transform: none;
 	transition: all 0s ease 0s;
-	outline: rgb(255, 0, 0) dashed 1px;
-	outline-offset: 0px;
 	box-sizing: border-box;
 	resize: none;
 	text-shadow: none;
@@ -122,14 +119,15 @@ code {
 
 a {
 	/* Font & Text */
-	font-family: Lato, proxima-nova, "Helvetica Neue", Arial, sans-serif;
+	font-family: Lato, "Helvetica Neue", Arial, sans-serif;
 	font-size: 18px;
 	font-style: italic;
 	font-variant: normal;
 	font-weight: 300;
 	letter-spacing: normal;
 	line-height: 24px;
-	text-decoration: none solid rgb(255, 255, 255);
+	text-decoration: underline;
+	color: #000000;
 	text-align: start;
 	text-indent: 0px;
 	text-transform: none;
@@ -137,28 +135,6 @@ a {
 	white-space: normal;
 	word-spacing: 0px;
 
-	/* Color & Background */
-	background-attachment: scroll;
-	background-color: rgba(0, 0, 0, 0);
-	background-image: linear-gradient(rgb(214, 74, 112), rgb(214, 74, 112));
-	background-position: 0px 5.4px;
-	background-repeat: no-repeat;
-	color: rgb(255, 255, 255);
-
-	/* Box */
-	height: auto;
-	width: auto;
-	border: 0px none rgb(255, 255, 255);
-	border-top: 0px none rgb(255, 255, 255);
-	border-right: 0px none rgb(255, 255, 255);
-	border-bottom: 0px none rgb(255, 255, 255);
-	border-left: 0px none rgb(255, 255, 255);
-	margin: 0px;
-	padding: 2.25px 1px 0px;
-	max-height: none;
-	min-height: 0px;
-	max-width: none;
-	min-width: 0px;
 
 	/* Positioning */
 	position: static;
@@ -171,45 +147,26 @@ a {
 	clear: none;
 	z-index: auto;
 
-	/* List */
-	list-style-image: none;
-	list-style-type: disc;
-	list-style-position: outside;
-
-	/* Table */
-	border-collapse: separate;
-	border-spacing: 0px 0px;
-	caption-side: top;
-	empty-cells: show;
-	table-layout: auto;
 
 	/* Miscellaneous */
 	overflow: visible;
 	cursor: pointer;
 	visibility: visible;
 
-	/* Effects */
-	transform: none;
-	transition: background-position 0.15s ease 0s, color 0.15s ease 0s;
-	outline: rgb(255, 0, 0) dashed 1px;
-	outline-offset: 0px;
-	box-sizing: border-box;
-	resize: none;
-	text-shadow: none;
-	text-overflow: clip;
-	word-wrap: normal;
-	box-shadow: none;
-	border-top-left-radius: 0px;
-	border-top-right-radius: 0px;
-	border-bottom-left-radius: 0px;
-	border-bottom-right-radius: 0px;
+}
+
+a:hover,
+a:focus {
+	text-decoration: underline solid rgb(255, 255, 255);
+	color: rgb(159, 32, 66)
+	
 }
 
 
 
 blockquote {
 	/* Font & Text */
-	font-family: Lato, proxima-nova, "Helvetica Neue", Arial, sans-serif;
+	font-family: Lato, "Helvetica Neue", Arial, sans-serif;
 	font-size: 17.5px;
 	font-style: italic;
 	font-variant: normal;
@@ -233,8 +190,7 @@ blockquote {
 	color: rgb(64, 64, 64);
 	
 	/* Box */
-	height: 60px;
-	width: 783.531px;
+
 	border-top: 0px none rgb(64, 64, 64);
 	border-right: 0px none rgb(64, 64, 64);
 	border-bottom: 0px none rgb(64, 64, 64);
@@ -277,8 +233,6 @@ blockquote {
 	/* Effects */
 	transform: none;
 	transition: all 0s ease 0s;
-	outline: rgb(255, 0, 0) dashed 1px;
-	outline-offset: 0px;
 	box-sizing: border-box;
 	resize: none;
 	text-shadow: none;
@@ -289,4 +243,26 @@ blockquote {
 	border-top-right-radius: 0px;
 	border-bottom-left-radius: 0px;
 	border-bottom-right-radius: 0px;
+}
+
+blockquote a {
+	background-attachment: scroll;
+	background-color: rgb(240, 240, 240);
+	background-image: none;
+	background-position: 0% 0%;
+	background-repeat: repeat;
+	color: rgb(64, 64, 64);
+	text-decoration: underline;
+	
+}
+
+blockquote a:hover {
+	/* Color & Background */
+	background-attachment: scroll;
+	background-color: rgba(0, 0, 0, 0);
+	background-image: linear-gradient(rgb(214, 74, 112), rgb(214, 74, 112));
+	background-position: 0px 5.4px;
+	background-repeat: no-repeat;
+	color: rgb(255, 255, 255);
+	text-decoration: underline;
 }
