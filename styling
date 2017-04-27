@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab|Lato|PT+Serif+Caption');
+
+body {
+	background-color: #fcfcfc;
+	
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Roboto Slab", "PT Serif Caption", Georgia, Arial, sans-serif;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	letter-spacing: normal;
+	text-decoration: none solid rgb(159, 32, 66);
+	color: rgb(159, 32, 66);
+	text-align: start;
+	text-indent: 0px;
+	text-transform: none;
+	vertical-align: baseline;
+	white-space: normal;
+	word-spacing: 0px;
+
+}
+
+p {
+	font-family: Georgia,"Times New Roman",Times, serif;
+    font-size: 18.4px;
+    line-height: 25px;
+    color: #000000;
+    background-color: #ffffff;
+	text-decoration: none;
+	
+}
+
+
+code {
+	/* Font & Text */
+	font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+	font-size: 15.3px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	letter-spacing: normal;
+	line-height: 24px;
+	text-decoration: none solid rgb(199, 37, 78);
+	text-align: left;
+	text-indent: 0px;
+	text-transform: none;
+	vertical-align: baseline;
+	white-space: pre;
+	word-spacing: 0px;
+
+	/* Color & Background */
+	background-attachment: scroll;
+	background-color: rgb(255, 255, 255);
+	background-image: none;
+	background-position: 0% 0%;
+	background-repeat: repeat;
+	color: rgb(199, 37, 78);
+
+	/* Box */
+	height: auto;
+	width: auto;
+	border: 1px solid rgb(225, 228, 229);
+	border-top: 1px solid rgb(225, 228, 229);
+	border-right: 1px solid rgb(225, 228, 229);
+	border-bottom: 1px solid rgb(225, 228, 229);
+	border-left: 1px solid rgb(225, 228, 229);
+	margin: 0px;
+	padding: 0px 5px;
+	max-height: none;
+	min-height: 0px;
+	max-width: 100%;
+	min-width: 0px;
+
+	/* Positioning */
+	position: static;
+	top: auto;
+	bottom: auto;
+	right: auto;
+	left: auto;
+	float: none;
+	display: inline;
+	clear: none;
+	z-index: auto;
+
+	/* List */
+	list-style-image: none;
+	list-style-type: disc;
+	list-style-position: outside;
+
+	/* Table */
+	border-collapse: separate;
+	border-spacing: 0px 0px;
+	caption-side: top;
+	empty-cells: show;
+	table-layout: auto;
+
+	/* Miscellaneous */
+	overflow: auto;
+	cursor: auto;
+	visibility: visible;
+
+	/* Effects */
+	transform: none;
+	transition: all 0s ease 0s;
+	box-sizing: border-box;
+	resize: none;
+	text-shadow: none;
+	text-overflow: clip;
+	word-wrap: normal;
+	box-shadow: none;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
+a {
+	/* Font & Text */
+	font-family: Lato, "Helvetica Neue", Arial, sans-serif;
+	font-size: 18px;
+	font-style: italic;
+	font-variant: normal;
+	font-weight: 300;
+	letter-spacing: normal;
+	line-height: 24px;
+	text-decoration: underline;
+	color: #000000;
+	text-align: start;
+	text-indent: 0px;
+	text-transform: none;
+	vertical-align: baseline;
+	white-space: normal;
+	word-spacing: 0px;
+
+
+	/* Positioning */
+	position: static;
+	top: auto;
+	bottom: auto;
+	right: auto;
+	left: auto;
+	float: none;
+	display: inline;
+	clear: none;
+	z-index: auto;
+
+
+	/* Miscellaneous */
+	overflow: visible;
+	cursor: pointer;
+	visibility: visible;
+
+}
+
+a:hover,
+a:focus {
+	text-decoration: underline solid rgb(255, 255, 255);
+	color: rgb(159, 32, 66)
+	
+}
+
+
+
+blockquote {
+	/* Font & Text */
+	font-family: Lato, "Helvetica Neue", Arial, sans-serif;
+	font-size: 17.5px;
+	font-style: italic;
+	font-variant: normal;
+	font-weight: normal;
+	letter-spacing: normal;
+	line-height: 24px;
+	text-decoration: none solid rgb(64, 64, 64);
+	text-align: start;
+	text-indent: 0px;
+	text-transform: none;
+	vertical-align: baseline;
+	white-space: normal;
+	word-spacing: 0px;
+
+	/* Color & Background */
+	background-attachment: scroll;
+	background-color: rgb(240, 240, 240);
+	background-image: none;
+	background-position: 0% 0%;
+	background-repeat: repeat;
+	color: rgb(64, 64, 64);
+	
+	/* Box */
+
+	border-top: 0px none rgb(64, 64, 64);
+	border-right: 0px none rgb(64, 64, 64);
+	border-bottom: 0px none rgb(64, 64, 64);
+	border-left: 5px solid rgb(204, 204, 204);
+	margin: 0px 0px 24px;
+	padding: 6px 20px;
+	max-height: none;
+	min-height: 0px;
+	max-width: none;
+	min-width: 0px;
+
+	/* Positioning */
+	position: static;
+	top: auto;
+	bottom: auto;
+	right: auto;
+	left: auto;
+	float: none;
+	display: block;
+	clear: none;
+	z-index: auto;
+
+	/* List */
+	list-style-image: none;
+	list-style-type: disc;
+	list-style-position: outside;
+
+	/* Table */
+	border-collapse: separate;
+	border-spacing: 0px 0px;
+	caption-side: top;
+	empty-cells: show;
+	table-layout: auto;
+
+	/* Miscellaneous */
+	overflow: visible;
+	cursor: auto;
+	visibility: visible;
+
+	/* Effects */
+	transform: none;
+	transition: all 0s ease 0s;
+	box-sizing: border-box;
+	resize: none;
+	text-shadow: none;
+	text-overflow: clip;
+	word-wrap: normal;
+	box-shadow: none;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+blockquote a {
+	background-attachment: scroll;
+	background-color: rgb(240, 240, 240);
+	background-image: none;
+	background-position: 0% 0%;
+	background-repeat: repeat;
+	color: rgb(64, 64, 64);
+	text-decoration: underline;
+	
+}
+
+blockquote a:hover {
+	/* Color & Background */
+	background-attachment: scroll;
+	background-color: rgba(0, 0, 0, 0);
+	background-image: linear-gradient(rgb(214, 74, 112), rgb(214, 74, 112));
+	background-position: 0px 5.4px;
+	background-repeat: no-repeat;
+	color: rgb(255, 255, 255);
+	text-decoration: underline;
+}
