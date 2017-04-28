@@ -55,7 +55,7 @@ Veri bilimi konu başlığını 5 başlık altında toplamak ve bu süreçlerde 
 
 ### 1. Veri Kaynaklarına Erişme
 
-Üzerinde çalışılan soruya cevap verebilecek veri kaynağına ulaşma sürecidir. Bu kaynaklar veri tabanları, metin dosyaları, API bağlantıları gibi pek çok ortamda bulunabilir.  
+Veriler, veri tabanları, metin dosyaları, API bağlantıları gibi pek çok ortamda bulunabilir. Bu kaynaklardan veriyi R ile işleyebileceğiniz hale dönüştürmeniz gerekir.
 
 Paketler:
 `readr`, `readxl`, `foreign`, `haven`, `DBI`,...
@@ -69,7 +69,7 @@ Eğitim Kaynakları:
 ### 2. Veri İşleme & Dönüştürme
 
 Dağınık şekilde tutulan veriyi düzenli forma getirme sürecidir.  
-*Düzenli form:* her gözlemin bir satır, her değişkenin bir sütun olduğu tabular veridir. Veri, düzenli formda olmadığı takdirde onu modellemek, görselleştirmek gibi süreçler karmakarışık bir hâl alır.  
+**Düzenli form:** Her gözlemin bir satır, her değişkenin bir sütun olduğu tabular veridir. Veri, düzenli formda olmadığı takdirde onu modellemek, görselleştirmek gibi süreçler karmakarışık bir hâl alır.  
 
 Paketler:
 `dplyr`, `tidyr`, `reshape2`
@@ -81,7 +81,7 @@ Eğitim Kaynakları:
 
 ### 3. Keşifçi Veri Analizi (Exploratory Data Analysis)
 
-Keşifçi Veri Analizi, bir modeli kurgulama öncesinde veriyi anlamak için kullanılan istatistiksel yöntemler ve veri görselleştirme yöntemleridir. Bu çalışmaları geneellikle takım arkadaşlarınızla ya da çalışmanızı devam ettirebilecek başka insanlarla paylaşabilirsiniz. Çünkü bu çalışmalar son ürün değildir ve bu yöntemleri anlamak için uzmanlık gerekir.
+Keşifçi Veri Analizi, bir modeli kurgulama öncesinde veriyi anlamak için kullanılan istatistiksel yöntemler ve veri görselleştirme yöntemleridir. Bu çalışmaları geneellikle takım arkadaşlarınızla ya da çalışmanızı devam ettirebilecek başka insanlarla paylaşabilirsiniz. Çünkü bu çalışmalar son ürün değildir ve bunları anlamak uzmanlık gerekir.
 
 Paketler:
 `ggplot2`  
@@ -120,7 +120,7 @@ Eğitim Kaynakları:
 ## Yenilikler
 ### 1. Fonksiyonel Programlama
 
-Bu size şaşırtıcı gelebilir ama, R programlama dilinde kayda değer bir deneyim sahibi olduğunu iddia eden biri olarak for döngüsünü sadece birkaç defa kullandım. Benzer şeyi diğer kontrol yapıları için de söyleyebilirim (`if`, `while`, …). Çünkü fonksiyonel programlama ve modern paketlerler ile temel R içindeki kontrol yapılarına ve fonksiyonlara çok az ihtiyaç duyuyorum.  
+Bu belki size şaşırtıcı gelebilir ama, R programlama dilinde kayda değer bir deneyim sahibi olduğunu iddia eden biri olarak for döngüsünü sadece birkaç defa kullandım. Benzer şeyi diğer kontrol yapıları için de söyleyebilirim (`if`, `while`, …). Çünkü fonksiyonel programlama ve modern paketlerler ile temel R içindeki kontrol yapılarına ve fonksiyonlara çok az ihtiyaç duyuyorum.  
 
 Şimdiye kadar pek çok programlama dili ile çalışmış ve temel mesleği yazılım geliştirmek olan kişiler bu bakış açımı eleştirebilir. Dolayısıyla programlama konusunda faydacı bir yaklaşımımın olduğunu belirtmek istiyorum.
 
