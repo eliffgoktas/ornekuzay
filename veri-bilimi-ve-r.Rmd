@@ -18,12 +18,10 @@ Bu yazıdaki konuları üç temel başlık altında toplamak istiyorum:
 
 ## Genel Giriş
 
-_Bölüm 1: Bu bölümü daha önce herhangi bir programlama dilinde deneyiminiz olmadığını varsayarak yazıyorum. Dilerseniz bir sonraki bölüme geçebilirsiniz._
-
 ### 1. Yüksek Düzeyli Programlama Dili (High Level Programming Language)
 
 Yüksek düzeyli programlama dili, insan diline yakın, işlemciye uzak bir yapıdadır. İngilizce bilgisi, yüksek düzeyli programlama dilini öğrenmeyi kolaylaştırır.
-R da yüksek düzeyli bir programlama dilidir: Fonksiyonlar genelde İngilizce fiillerdir: `select`, `filter`, `group_by`, `summarize`…  
+R, yüksek düzeyli bir programlama dilidir: Fonksiyonlar genelde İngilizce fiillerdir: `select`, `filter`, `group_by`, `summarize`…  
 
 Yüksek düzeyli programlama dilleri için şunları söyleyebiliriz:
 
@@ -47,19 +45,17 @@ Dünyada Python kullanıcı sayısı R kullanıcı sayısından daha fazladır. 
 
 ### 4. RStudio
 
+RStudio, R programlama dili için en çok tercih edilen geliştirme ortamıdır. Çalışma verimliliğini oldukça arttırmaktadır.
+
 ![](https://cdn-images-1.medium.com/max/1600/1*S-EK-5mKK8Wz3pwJhJq1Mg.png)
-
-RStudio, R programlama dili için en çok kullanılan geliştirme ortamıdır. Çalışma verimliliğini oldukça attırıyor.
-
-_Bölüm 2: Bu bölümü R, Python, SQL ya da Excel gibi programlama dili ya da araçlarla veri analizi yaptığınızı ve R programlama diline ilgi duyduğunuzu varsayarak yazıyorum._
 
 ## Veri Bilimi ve R
 
-Veri Bilimi konu başlığını 5 başlık altında toplayacağım. Bu aşamaları kısaca açıklayıp o süreçte kullanılabilecek R paketlerini ve faydalı bulduğum eğitim kaynaklarını listeleyeceğim.
+Veri bilimi konu başlığını 5 başlık altında toplamak ve bu süreçlerde kullanılabilecek araçları listelemek istiyorum.
 
 ### 1. Veri Kaynaklarına Erişme
 
-Üzerinde çalışılan soruya cevap oluşturabilecek veri kaynağına ulaşma sürecidir. Bu kaynaklar veri tabanları, metin dosyaları, API bağlantıları gibi pek çok ortamda bulunabilir.  
+Üzerinde çalışılan soruya cevap verebilecek veri kaynağına ulaşma sürecidir. Bu kaynaklar veri tabanları, metin dosyaları, API bağlantıları gibi pek çok ortamda bulunabilir.  
 
 Paketler:
 `readr`, `readxl`, `foreign`, `haven`, `DBI`,...
@@ -72,7 +68,8 @@ Eğitim Kaynakları:
 
 ### 2. Veri İşleme & Dönüştürme
 
-Dağınık şekilde tutulan veriyi düzenli forma getirme sürecidir. Düzenli form: her gözlemin bir satır, her değişkenin bir sütun olduğu tabular veridir. Veri, düzenli formda olmadığı takdirde onu modellemek, görselleştirmek gibi süreçler karmakarışık bir hâl alır.  
+Dağınık şekilde tutulan veriyi düzenli forma getirme sürecidir.  
+*Düzenli form:* her gözlemin bir satır, her değişkenin bir sütun olduğu tabular veridir. Veri, düzenli formda olmadığı takdirde onu modellemek, görselleştirmek gibi süreçler karmakarışık bir hâl alır.  
 
 Paketler:
 `dplyr`, `tidyr`, `reshape2`
@@ -84,7 +81,7 @@ Eğitim Kaynakları:
 
 ### 3. Keşifçi Veri Analizi (Exploratory Data Analysis)
 
-Keşifçi Veri Analizi, bir modeli kurgulama öncesinde veriyi anlamak için kullanılan istatistiksel yöntemler ve veri görselleştirmeleridir. Bu çalışmaları ancak takım arkadaşlarınızla ya da çalışmanızı devam ettirebilecek başka insanlarla paylaşabilirsiniz. Çünkü bu çalışmalar son ürün değildir ve bu yöntemleri anlamak için uzmanlık gerekir.
+Keşifçi Veri Analizi, bir modeli kurgulama öncesinde veriyi anlamak için kullanılan istatistiksel yöntemler ve veri görselleştirme yöntemleridir. Bu çalışmaları geneellikle takım arkadaşlarınızla ya da çalışmanızı devam ettirebilecek başka insanlarla paylaşabilirsiniz. Çünkü bu çalışmalar son ürün değildir ve bu yöntemleri anlamak için uzmanlık gerekir.
 
 Paketler:
 `ggplot2`  
@@ -97,7 +94,7 @@ Eğitim Kaynakları:
 
 ### 4. Modelleme
 
-Bir soru ya da bir olguyu açıklayan soyut bir mekanizma yaratma sürecidir. Bu süreç için matematik ve istatistiğe yakın olmak gerekir. 
+Bir soruyu cevaplayan ya da bir olguyu açıklayan soyut bir mekanizma yaratma sürecidir. Bu süreç için matematik ve istatistiğe yakın olmak gerekir. 
 
 Paketler:
 `broom`, `purrr`, `caret`
@@ -110,7 +107,7 @@ Eğitim Kaynakları:
 
 ### 5. Ürünleştirme
 
-Geliştirdiğiniz modeli güçlü iletişim yöntemleriyle diğer insanlarla paylaşabilmek de önemli bir süreçtir. Çalışmalarınızın işe yarayabilmesi ve değer yaratabilmesi için bu alana da özen göstermeniz gerekiyor.
+Geliştirdiğiniz modeli güçlü iletişim yöntemleriyle diğer insanlarla paylaşabilmek önemli bir beceridir. Çalışmalarınızın işe yarayabilmesi ve değer yaratabilmesi için bu alana da özen göstermeniz gerekiyor.
 
 Paketler:
 `shiny`, `rmarkdown`, `knitr`
@@ -119,8 +116,6 @@ Eğitim Kaynakları:
 [Shiny Tutorial — RStudio](http://shiny.rstudio.com/tutorial/)  
 [Reproduciple Research — Coursera](https://www.coursera.org/learn/reproducible-research)  
 [Reporting with R Markdown — Datacamp](https://www.datacamp.com/courses/reporting-with-r-markdown)  
-
-_Bölüm 3: Bu bölümü R programlama dilinde bir tecrübenizin olduğunu varsayarak yazıyorum._
 
 ## Yenilikler
 ### 1. Fonksiyonel Programlama
