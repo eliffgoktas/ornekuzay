@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab|Lato|PT+Serif+Caption');
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif|Source+Serif+Pro|Roboto+Slab|PT+Serif+Caption|Open+Sans:300');
 
 body {
-	background-color: #fcfcfc;
+	background-color: #ffffff;
 	
 }
 
@@ -12,7 +12,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-variant: normal;
 	font-weight: bold;
 	letter-spacing: normal;
-	text-decoration: none solid rgb(159, 32, 66);
+	text-decoration: none;
 	color: rgb(159, 32, 66);
 	text-align: start;
 	text-indent: 0px;
@@ -24,110 +24,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-	font-family: Georgia,"Times New Roman",Times, serif;
-    font-size: 18.4px;
-    line-height: 25px;
-    color: #000000;
-    background-color: #ffffff;
+	font-family: 'Noto Serif', sans-serif, 'Source Serif Pro', serif;
+    font-size: 21px;
+    line-height: 33px;
+    color: #191919;
 	text-decoration: none;
 	
 }
 
 
-code {
+p a {
 	/* Font & Text */
-	font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-	font-size: 15.3px;
+	font-family: 'Noto Serif', sans-serif, 'Source Serif Pro', serif;
+	font-size: 21px;
 	font-style: normal;
-	font-variant: normal;
-	font-weight: normal;
-	letter-spacing: normal;
-	line-height: 24px;
-	text-decoration: none solid rgb(199, 37, 78);
-	text-align: left;
-	text-indent: 0px;
-	text-transform: none;
-	vertical-align: baseline;
-	white-space: pre;
-	word-spacing: 0px;
-
-	/* Color & Background */
-	background-attachment: scroll;
-	background-color: rgb(255, 255, 255);
-	background-image: none;
-	background-position: 0% 0%;
-	background-repeat: repeat;
-	color: rgb(199, 37, 78);
-
-	/* Box */
-	height: auto;
-	width: auto;
-	border: 1px solid rgb(225, 228, 229);
-	border-top: 1px solid rgb(225, 228, 229);
-	border-right: 1px solid rgb(225, 228, 229);
-	border-bottom: 1px solid rgb(225, 228, 229);
-	border-left: 1px solid rgb(225, 228, 229);
-	margin: 0px;
-	padding: 0px 5px;
-	max-height: none;
-	min-height: 0px;
-	max-width: 100%;
-	min-width: 0px;
-
-	/* Positioning */
-	position: static;
-	top: auto;
-	bottom: auto;
-	right: auto;
-	left: auto;
-	float: none;
-	display: inline;
-	clear: none;
-	z-index: auto;
-
-	/* List */
-	list-style-image: none;
-	list-style-type: disc;
-	list-style-position: outside;
-
-	/* Table */
-	border-collapse: separate;
-	border-spacing: 0px 0px;
-	caption-side: top;
-	empty-cells: show;
-	table-layout: auto;
-
-	/* Miscellaneous */
-	overflow: auto;
-	cursor: auto;
-	visibility: visible;
-
-	/* Effects */
-	transform: none;
-	transition: all 0s ease 0s;
-	box-sizing: border-box;
-	resize: none;
-	text-shadow: none;
-	text-overflow: clip;
-	word-wrap: normal;
-	box-shadow: none;
-	border-top-left-radius: 4px;
-	border-top-right-radius: 4px;
-	border-bottom-left-radius: 4px;
-	border-bottom-right-radius: 4px;
-}
-
-a {
-	/* Font & Text */
-	font-family: Lato, "Helvetica Neue", Arial, sans-serif;
-	font-size: 18px;
-	font-style: italic;
 	font-variant: normal;
 	font-weight: 300;
 	letter-spacing: normal;
 	line-height: 24px;
-	text-decoration: underline;
-	color: #000000;
+	text-decoration: none;
+	color: #2B6DAD;
 	text-align: start;
 	text-indent: 0px;
 	text-transform: none;
@@ -155,25 +71,33 @@ a {
 
 }
 
-a:hover,
-a:focus {
-	text-decoration: underline solid rgb(255, 255, 255);
-	color: rgb(159, 32, 66)
+
+p a:hover{
+	text-decoration: underline;
+	color: #2B6DAD;
 	
 }
 
+li {
+	font-family: 'Noto Serif', sans-serif, 'Source Serif Pro', serif;
+    font-size: 18px;
+    line-height: 22px;
+    color: #191919;
+	text-decoration: none;
+	list-style-type: disc;
+}
 
 
 blockquote {
 	/* Font & Text */
-	font-family: Lato, "Helvetica Neue", Arial, sans-serif;
+	font-family: 'Noto Serif', sans-serif, 'Source Serif Pro', serif;
 	font-size: 17.5px;
 	font-style: italic;
 	font-variant: normal;
 	font-weight: normal;
 	letter-spacing: normal;
 	line-height: 24px;
-	text-decoration: none solid rgb(64, 64, 64);
+	text-decoration: none;
 	text-align: start;
 	text-indent: 0px;
 	text-transform: none;
@@ -266,3 +190,13 @@ blockquote a:hover {
 	color: rgb(255, 255, 255);
 	text-decoration: underline;
 }
+
+.author {
+	font-family: "Open Sans";
+	font-weight: 300;
+	color: #474544; 
+	font-style: normal;
+	font: normal #474544;
+
+}
+
